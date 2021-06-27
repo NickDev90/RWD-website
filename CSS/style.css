@@ -169,10 +169,15 @@ border-style: none;
 .filter {
 	padding: 120px 0;
 }
+.filter > div {
+	position: relative;
+}
 .filter img {
-	max-width: 100%;
-	margin-right: 30px;
-	margin-bottom: 30px;
+	display: block;
+	width: 100%;
+/*	margin-right: 30px;
+	margin-bottom: 30px;*/
+	margin: 30px auto;
 }
 .btn-img {
 	padding: 15px 45px;
@@ -190,7 +195,7 @@ div[filter]:hover img {
 	filter: brightness(50%);
 	transition: .3s;
 }
-.text {
+.filter .text {
 	display: none;
 }
 div[filter]:hover .text {
@@ -492,7 +497,7 @@ div[filter]:hover .text {
 	display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
 
 	nav {
 		display: none;
@@ -516,6 +521,9 @@ div[filter]:hover .text {
 	.blog_text {
 	padding-top: 10px;
 	}
+	.about__text {
+		margin-bottom: 60px;
+	}
 	.footer input,
 	.footer textarea {
 		margin-top: 20px;
@@ -526,6 +534,13 @@ div[filter]:hover .text {
 		max-width: 40%;
 		margin: 0 auto;
 	}
+	.filter {
+		padding: 60px 20px;
+	}
+	.filter img {
+		margin: 30px auto;
+	}
+
 }
 
 @media (max-width: 480px) {
@@ -556,8 +571,8 @@ div[filter]:hover .text {
 	.about__title {
 		margin-bottom: 20px;
 	}
-	.portfolio, .filter {
-		padding: 20px;
+	.portfolio {
+		padding: 60px 0;
 	}
 	.btn-works {
 		margin: 10px auto;
